@@ -7,7 +7,6 @@ import 'package:test_flutter_exomind_benamara/services_api.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:intl/intl.dart' show toBeginningOfSentenceCase;
 
-
 class WeatherSearchScreen extends StatefulWidget {
   WeatherSearchScreen({Key key}) : super(key: key);
 
@@ -16,14 +15,14 @@ class WeatherSearchScreen extends StatefulWidget {
 }
 
 class _WeatherSearchScreenState extends State<WeatherSearchScreen> {
-  double progress = 0; 
+  double progress = 0;
   bool isAchieved = false;
   bool isLoading = false;
   Timer _timer;
   String currentMsg = "";
 
   List<String> loadingMessages = [
-    "Nous téléchargeons les données..",   
+    "Nous téléchargeons les données..",
     "C'est presque fini...",
     "Plus que quelques secondes avant d'avoir le résultat..."
   ];
@@ -53,6 +52,7 @@ class _WeatherSearchScreenState extends State<WeatherSearchScreen> {
     mapCities["Lyon"]["temperature"] = 0;
     mapCities["Lyon"]["description"] = "";
   }
+
 /* 
   * Chaque seconde la variable progress s'incrémente pour arriver à la valeur 1. 
   * Selon les secondes, un switch case va permettre de lancer les requête vers l'API OpenWeatherMap
@@ -96,7 +96,6 @@ class _WeatherSearchScreenState extends State<WeatherSearchScreen> {
       }
     });
   }
-
 
   @override
   void initState() {
@@ -179,6 +178,7 @@ class _WeatherSearchScreenState extends State<WeatherSearchScreen> {
                                     setState(() {
                                       progress = 0;
                                       isAchieved = false;
+                                      currentMsg = "";
                                       searchWeatherTimer();
                                       resetMapCities();
                                     });
@@ -235,6 +235,7 @@ class _WeatherSearchScreenState extends State<WeatherSearchScreen> {
     );
   }
 }
+
 // Widget qui s'adapte en fonction de l'état du chargement des données
 Text showLoadingText(String message) {
   return Text(

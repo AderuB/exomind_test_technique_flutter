@@ -14,6 +14,7 @@ class ServiceApi {
   void getWeather(String city, Map<String, dynamic> mapCities) async {
     Weather weather;
 
+    // http://api.openweathermap.org/data/2.5/weather?q={CityName}&units=metric&lang=fr&appid=5c2193b233616f7148f642243a1cebd5
     String apiString = baseApi + city + units + lang + myKey;
     final uri = Uri.parse(apiString);
 
@@ -26,7 +27,6 @@ class ServiceApi {
 
       mapCities[city]["temperature"] = weather.temp;
       mapCities[city]["description"] = weather.description;
-
     } else {
       // En cas d'erreur de reponse del'api, un message d'erreur s'affiche sans pour autant arrêter
       Fluttertoast.showToast(
