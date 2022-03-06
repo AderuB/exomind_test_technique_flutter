@@ -23,7 +23,7 @@ class _WeatherSearchScreenState extends State<WeatherSearchScreen> {
   String currentMsg = "";
 
   List<String> loadingMessages = [
-    "Nous téléchargeons les données..",
+    "Nous téléchargeons les données..",   
     "C'est presque fini...",
     "Plus que quelques secondes avant d'avoir le résultat..."
   ];
