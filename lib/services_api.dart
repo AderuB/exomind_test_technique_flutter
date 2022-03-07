@@ -21,10 +21,11 @@ class ServiceApi {
     final response = await http.get(uri);
 
     if (response.statusCode == 200) {
-      //Récupération des données json
+      // Récupération des données json
       Map map = json.decode(response.body);
       weather = Weather(map);
 
+      // Ajout des valeurs récupérées dans la map pris en paramètre
       mapCities[city]["temperature"] = weather.temp;
       mapCities[city]["description"] = weather.description;
     } else {

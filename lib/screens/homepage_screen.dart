@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter_exomind_benamara/screens/weather_search_screen.dart';
 
-
 // Page principale
 class HomePageScreen extends StatefulWidget {
   HomePageScreen({Key key}) : super(key: key);
@@ -69,6 +68,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
   }
 }
 
+/* 
+* Animation transition entre les deux screens 
+*/
 Route _createRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) =>

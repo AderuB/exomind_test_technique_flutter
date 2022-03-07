@@ -8,7 +8,6 @@ class Weather {
   Weather(Map map) {
     List weather = map["weather"];
     Map weatherMap = weather.first;
-
     main = weatherMap["main"];
     description = weatherMap["description"];
     Map mainMap = map["main"];

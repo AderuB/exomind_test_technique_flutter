@@ -236,7 +236,9 @@ class _WeatherSearchScreenState extends State<WeatherSearchScreen> {
   }
 }
 
-// Widget qui s'adapte en fonction de l'état du chargement des données
+/* 
+* Widget qui s'adapte en fonction de l'état du chargement des données
+*/
 Text showLoadingText(String message) {
   return Text(
     message,
@@ -246,7 +248,9 @@ Text showLoadingText(String message) {
   );
 }
 
-//List tile utilisée pour afficher les données
+/* 
+* /List tile utilisée pour afficher les données
+*/
 Widget tileWeather(
     BuildContext context, String city, Map<String, dynamic> map) {
   return Padding(

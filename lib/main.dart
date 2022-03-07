@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter_exomind_benamara/screens/homepage_screen.dart';
 
+/* 
+* Main
+*/
 void main() {
   runApp(const MyApp());
 }
